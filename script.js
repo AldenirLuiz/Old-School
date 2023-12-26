@@ -6,12 +6,7 @@ function expandlink(){
     maingalery.style.display = 'none'
     maintitle.style.display = 'none'
 
-    var objectHTML = document.createElement('object');
-    objectHTML.className = 'obj';
-    objectHTML.type = 'text/html';
-    objectHTML.data = 'sub/history.html';
+    mainsection.add
 
-    objectHTML.style.overflow = 'hidden';
-
-    mainsection.appendChild(objectHTML);
+    mainsection.innerHTML = '<iframe src="sub/history.html" width="100%" height="2600" scrolling="no"></iframe>';
 }

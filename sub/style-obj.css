@@ -13,19 +13,6 @@ section{
     padding: 12px;
 }
 
-#history::-webkit-scrollbar {
-    display: none;
-    overflow: hidden;
-  }
-
-#history{
-    overflow: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-
-
 section article h1{
     align-self: center;
     justify-self: center;
