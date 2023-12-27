@@ -6,14 +6,19 @@ body{
 }
 
 section{
+    display: flex;
     margin: 12px;
     padding: 12px;
+    align-items: center;
+    justify-content: center;
 }
 
 section article{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    max-width: 700px;
 }
 
 section article h1{
@@ -25,6 +30,11 @@ section article h1{
 section article p{
     text-align: left;
     padding-bottom: 12px;
+    align-self: start;
+}
+
+section article p strong{
+    max-width: fit-content;
 }
 
 section * h3{
@@ -33,26 +43,40 @@ section * h3{
 }
 
 .in-article-container{
-    display: flex;
-    flex-direction: row;
     margin-bottom: 14px;
 }
+
+.img-left-middle{
+    float: left;
+    margin-right: 20px;
+}
+
+.img-right-middle{
+    float: right;
+    margin-left: 20px;
+}
+
+
 .in-article-img{
     width: 200px;
 }
 
+
+.in-article-container-text{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .container-img-large{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
 .in-article-img-large{
     margin: 12px;
-    width: 500px;
+    width: 100%;
 }
 
 .text-in-article-right{
@@ -76,6 +100,11 @@ section * h3{
     text-shadow: 0 0 1px;
 }
 
+.code-container pre{
+    margin: 0;
+    padding: 0;
+}
+
 .code-container .targe{
     text-align: end;
     margin: 0;
@@ -83,4 +112,22 @@ section * h3{
     width: 100%;
     height: 40px;
     background-color: black;
+}
+
+table{
+    padding: 0;
+    margin: 0;
+    border: solid black 1px;
+    border-radius: 6px;
+}
+
+
+.table-cell{
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    text-align: center;
+    border-bottom: solid black 1px;
+    border-right: solid black 1px ;
+    background: inherit;
 }

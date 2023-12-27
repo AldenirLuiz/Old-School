@@ -58,7 +58,7 @@ main aside div nav div{
     flex-direction: column;
     width: 140px;
     height: 20px;
-    background-color: aquamarine;
+    background: rgba(0, 0, 0, .2);
     padding: 8px;
     margin: 8px;
 }
@@ -76,6 +76,11 @@ main section{
     transition: all .4s;
 }
 
+.container-iframe{
+    display: block;
+    background-color: aqua;
+    width: 100%;
+}
 
 .galery{
     display: flex;
@@ -133,7 +138,7 @@ main section{
     margin: 0;
     padding: 0;
     position: relative;
-    bottom: 0;
+    bottom: 50px;
     background: rgba(0, 0, 0, .2);
     border-radius: 8px 8px 0 0;
     display: flex;

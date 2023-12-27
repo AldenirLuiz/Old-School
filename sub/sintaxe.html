@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
     <link rel="stylesheet" href="style-obj.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 </head>
 <body>
     <section>
@@ -24,51 +25,77 @@
                 
                 
                 <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
+                    <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
     # Isto é um comentário em Python
     print("Olá, Mundo!")
                     </code>
                 </pre>
             </div>
 
-            <p>O caractere # é usado para comentários em Python, e tudo após ele na mesma linha é tratado como um comentário.</p>
+            <p>O caractere # é usado para comentários em Python, e tudo após ele na mesma linha é tratado como um comentário.
+                Já a palavra <Strong>print</Strong> é uma das varias palavras reservadas da linguagem (trataremos disso mais adiante)
+                <strong>print()</strong> é uma funcao interna da linguagem que serve para transmitir dados para o console, tornando possivel 
+                a exibição das informações adicionadas dentro dos parenteses ( ) desde que os dados obedeçam aos requisitos, os dados devem ser 
+                do tipo string ou possam ser convertidos em string, char ou byte (Falaremos de tipos de dados adiante) a conversao de tipos ocorre 
+                automaticamente dentro da função, então nao se atenha a estes detalhes no momento.
+            </p>
 
             <h3>Variáveis e Tipos</h3>
-            <p>Variáveis</p>
-            <p>Variáveis em Python são usadas para armazenar dados. Uma variável é criada quando você atribui um valor a ela. O nome da variável deve começar com uma letra ou sublinhado, seguido por letras, números ou sublinhados. Exemplos:</p>
+            <p><strong> Variáveis...</strong></p>
+            <p>Variáveis em Python (e em qualquer outra linguagem) são usadas para armazenar dados na memória. Uma variável é criada quando você atribui um valor a ela
+                utilizando o simbolo de igualdade ( = ) <br> da seguinte forma: <strong> nome_da_variavel = valor </strong> <br> 
+                O nome da variável deve começar com uma letra ou sublinhado, seguido por letras, números ou sublinhados. Exemplos:</p>
 
             <div class="code-container">
-                <pre><code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
+                <pre><code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
     nome = "João"
     idade = 25
                 </code></pre>
             </div>
+
+            <p>
+                Quando você reatribui um valor a mesma variável esta sempre tera o ultimo valor atribuído a ela e os valores anteriores serão perdidos.
+            </p>
+
+            <p>Veja este exemplo:</p>
+
+            <div class="code-container">
+                <pre><code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
+    nome = "João"
+    idade = 25
+
+    nome = "Maria"
+    idade = "33"
+
+    print(maria) # Será exibido no terminal: Maria
+    print(idade) # Será exibido no terminal: 33
+                </code></pre>
+            </div>
             
-            <p>Tipos de Dados</p>
-            <p>Python é uma linguagem dinamicamente tipada, o que significa que você não precisa declarar explicitamente o tipo de uma variável. Os tipos de dados comuns em Python incluem inteiros (int), números de ponto flutuante (float), strings (str), listas (list), tuplas (tuple), dicionários (dict), entre outros.</p>
+            <br><br><br><p><strong> Tipos de Dados</strong></p>
+            <p>Python é uma linguagem dinamicamente tipada, o que significa que você não precisa declarar explicitamente o tipo de uma variável. 
+                Os tipos de dados comuns em Python incluem 
+                inteiros: <strong>int</strong>, 
+                números de ponto flutuante: <strong>float</strong>, 
+                strings: <strong>str</strong>, 
+                listas: <strong>list</strong>, 
+                tuplas <strong>tuple</strong>, 
+                dicionários <strong>dict</strong>, 
+                entre outros.</p>
             <div class="code-container">
                 <pre><code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
-    numero = 42
-    pi = 3.14
-    nome = "Alice"
-    lista = [1, 2, 3]
+    numero = 42         # tipo: int
+    pi = 3.14           # tipo: float
+    nome = "Alice"      # tipo: str
+    lista = [1, 2, 3]   # tipo: list
                 </code></pre>
             </div>
 
-            <p>Palavras Reservadas</p>
+            <p><br><br><br> <strong>Palavras Reservadas</strong></p>
             <p>Python tem um conjunto de palavras reservadas que têm significados especiais e não podem ser usadas como identificadores (nomes de variáveis, funções, etc.). Algumas palavras reservadas comuns incluem <strong>if</strong>, <strong>else</strong>, <strong>for</strong>, <strong>while</strong>, <strong>def</strong>, <strong>class</strong>, <strong>True</strong>, <strong>False</strong>, e <strong>None</strong>.</p>
+            <p>Você pode visualizar uma lista completa com todas as palavras reservada aqui: <a href="table.html">Tabela</a></p>
 
-            <div class="code-container">
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
-    if idade >= 18:
-        print("Você é maior de idade.")
-    else:
-        print("Você é menor de idade.")
-                    </code>
-                </pre>
-            </div>
-
+            
             <h3>Convenções da Linguagem</h3>
             <p>Python tem várias convenções que os desenvolvedores seguem para tornar o código mais legível e consistente. Algumas delas incluem:</p>
             <p>PEP 8: Este é o guia de estilo oficial para Python. Ele abrange tópicos como indentação, espaçamento, nomeação de variáveis, etc.</p>
