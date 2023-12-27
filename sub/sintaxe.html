@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-obj.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+</head>
+<body>
+    <section>
+        <article>
+            <h1>
+                Introdução à Sintaxe da Linguagem Python: Uma Visão Abrangente
+            </h1>
+
+            <p>Python, uma linguagem de programação de alto nível, é conhecida por sua sintaxe limpa e legível, tornando-a uma escolha popular entre desenvolvedores de todos os níveis. Neste artigo, exploraremos a sintaxe do Python, começando pela estrutura básica de um script e, em seguida, mergulhando em tópicos como variáveis, tipos, palavras reservadas e convenções da linguagem.</p>
+
+            <h3>Estrutura de um Script Python</h3>
+            <p>Um script Python é composto por linhas de código que são executadas sequencialmente. O código é organizado em blocos usando indentação, o que elimina a necessidade de chaves ou palavras-chave de fim de bloco. Aqui está um exemplo básico de script Python:</p>
+            
+            <div class="code-container">
+                <p>Aqui está um exemplo de código Python:</p>
+                <pre>
+                    <code class="python">
+                        # Isto é um comentário em Python
+                        print("Olá, Mundo!")
+                    </code>
+                </pre>
+            </div>
+
+            <p>O caractere # é usado para comentários em Python, e tudo após ele na mesma linha é tratado como um comentário.</p>
+
+            <h3>Variáveis e Tipos</h3>
+            <p>Variáveis</p>
+            <p>Variáveis em Python são usadas para armazenar dados. Uma variável é criada quando você atribui um valor a ela. O nome da variável deve começar com uma letra ou sublinhado, seguido por letras, números ou sublinhados. Exemplos:</p>
+
+            <div class="code-container">
+                <pre>
+                    <code class="python">
+                        nome = "João"
+                        idade = 25
+                    </code>
+                </pre>
+            </div>
+            
+            <p>Tipos de Dados</p>
+            <p>Python é uma linguagem dinamicamente tipada, o que significa que você não precisa declarar explicitamente o tipo de uma variável. Os tipos de dados comuns em Python incluem inteiros (int), números de ponto flutuante (float), strings (str), listas (list), tuplas (tuple), dicionários (dict), entre outros.</p>
+            <div class="code-container">
+                <pre>
+                    <code class="python">
+                        numero = 42
+                        pi = 3.14
+                        nome = "Alice"
+                        lista = [1, 2, 3]
+                    </code>
+                </pre>
+            </div>
+
+            <p>Palavras Reservadas</p>
+            <p>Python tem um conjunto de palavras reservadas que têm significados especiais e não podem ser usadas como identificadores (nomes de variáveis, funções, etc.). Algumas palavras reservadas comuns incluem <strong>if</strong>, <strong>else</strong>, <strong>for</strong>, <strong>while</strong>, <strong>def</strong>, <strong>class</strong>, <strong>True</strong>, <strong>False</strong>, e <strong>None</strong>.</p>
+
+        </article>
+    </section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+</html>

@@ -2,10 +2,7 @@ body{
     margin: 0;
     padding: 0;
     text-decoration: none;
-    text-shadow: 0px 0px 1px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100;
-    font-style: oblique;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 section{
@@ -13,19 +10,26 @@ section{
     padding: 12px;
 }
 
-section article h1{
-    align-self: center;
-    justify-self: center;
+section article{
+    align-items: center;
+    justify-content: center;
     text-align: center;
+}
+
+section article h1{
+    align-self: flex-start;
+    text-align: start;
     font-size: 22pt;
 }
 
 section article p{
-    margin: 14px;
+    text-align: left;
+    padding-bottom: 12px;
 }
 
 section * h3{
-    margin-top: 100px;
+    text-align: left;
+    margin-top: 50px;
 }
 
 .in-article-container{
@@ -53,4 +57,28 @@ section * h3{
 
 .text-in-article-right{
     text-align: right;
+}
+
+.code-container{
+    align-self: center;
+    align-items: center;
+    display: block;
+    width: 80%;
+}
+
+.python {
+    display: flex;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+    padding: 0.5em;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: left;
+    width: inherit;
+    text-shadow: 0 0 1px;
+}
+.python pre code{
+    margin: 0;
+    padding: 0;
 }
