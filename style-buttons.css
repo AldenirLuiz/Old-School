@@ -1,0 +1,91 @@
+
+.social_media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social_media a {
+    color: gray;
+    text-decoration: none;
+}
+
+.in-block{
+    width: 90%;
+    margin: 4px;
+    border-radius: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.in-block:hover{
+    transform: scale(1.1);
+    transition: transform .2s ease-in-out;
+}
+
+.social_media svg {
+    width: 36pt;
+    margin-left: 8px;
+    height: 50px;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, .4));
+}
+
+.social_media .name{
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: inherit;
+    text-decoration-line: none;
+}
+
+.social_media a.linkedin svg{
+    color: darkblue;
+    opacity: .8;
+}
+.social_media a.github svg{
+    color: black;
+    opacity: .8;
+}
+.social_media a.youtube svg{
+    color: red;
+    opacity: .8;
+}
+.social_media a.facebook svg{
+    color: blue;
+    opacity: .8;
+}
+.social_media a.instagram svg{
+    color: blueviolet;
+    opacity: .8;
+}
+
+
+@media screen and (max-width: 925px){
+    .social_media a svg{
+        width: 22pt;
+    }
+    
+    .social_media{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social_media a{
+        max-width: 150px;
+        max-height: 35px;
+    }
+
+    .social_media a span{
+        font-size: 8pt;
+    }
+
+    .social_media a:not(:last-child){
+        margin-right: 50px;
+    }
+}
