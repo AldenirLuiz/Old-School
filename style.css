@@ -1,3 +1,4 @@
+
 body{
     margin: 0px;
     padding: 0px;
@@ -5,15 +6,16 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 aside{
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 20vw;
     height: 100%;
     border-right: 1px solid gray;
 }
+
 
 .in-block{
     padding: 4px;
@@ -22,7 +24,7 @@ aside{
 .nav-logo{
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 100%;
     border-bottom: 1px solid gray;
     align-items: center;
     justify-content: center;
@@ -69,12 +71,18 @@ header .menu-nav a:not(:last-child){
     margin-right: 24px;
 }
 
+#main-header{
+    width: 100%;
+
+}
+
 main{
     margin-top: 12px;
     display: flex;
     flex-direction: row;
     height: 100%;
     width: 100%;
+    justify-content: space-between;
 }
 
 main section .main-blocks-descript{
@@ -261,7 +269,7 @@ main section .main-blocks-descript{
 
 .footer-left{
     display: flex;
-    max-width: 200px;
+    max-width: 100%;
     margin: 2px;
     padding: 2px;
 }
@@ -417,7 +425,6 @@ table{
 
 @media only screen and (max-width: 920px){
     main{
-
         display: flex;
         flex-direction: column;
     }
@@ -441,12 +448,12 @@ table{
         width: 100%;
         max-width: 200px;
     }
-    
+
     .social_media{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        height: 200px;
+        height: 100%;
     }
     .in-block{
         display: flex;
@@ -488,4 +495,92 @@ footer {
     justify-content: space-between; /* Adicionei esta propriedade para distribuir os elementos no footer */
     box-shadow: 0 0 8px;
     
+}
+
+#openMenu, #closeMenu{
+    border: none;
+    background: none;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 925px){
+    #openMenu{
+        display: flex;
+    }
+    #my-name-container{
+        background-color: lch(from red 90 1 3);
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 8px 8px 0px 0px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #my-name-container h2{
+        align-self: center;
+    }
+
+    #title_c #title{
+        font-size: 18pt;
+    }
+
+    #img_profile{
+        width: 200px;
+    }
+
+    #my-name-container{
+        background-color: darkgray;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #responsive-menu{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #menuLinks{
+        width: 100%;
+    }
+
+    .resp-button{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+
+    }
+
+    .resp-links{
+        width: 100%;
+        height: 100%;
+    }
+
+    #openMenu {
+        font-size: 32pt;
+    }
+
+    #closeMenu{
+        display: block;
+        font-size: 40pt;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
 }

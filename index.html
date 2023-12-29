@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Python - Old-School</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-buttons.css">
+    <link rel="stylesheet" href="style-menu.css">
 </head>
 <body>
     <header>
         <div class="menu-media">
             <h1>Python Old-School</h1>
         </div>
-        <div class="menu-nav">
-            <nav>
-                <a href="https://aldenirluiz.github.io/Old-School/">Home</a>
-                <a href="#">Projetos</a>
-                <a href="https://github.com/AldenirLuiz/Old-School">Colabore</a>
-                <a href="https://aldenirluiz.github.io/Portifolio/">Contact-me</a>
+        
+        <menu class="menu-nav resp-menu" id="responsive-menu">
+            <button id="openMenu">&#9776;</button>
+            <nav id="menuLinks">
+                <div class="resp-button"><button id="closeMenu">&#10006;</button></div>
+                <div class="resp-links">
+                    <a href="https://aldenirluiz.github.io/Old-School/">Home</a>
+                    <a href="#">Projetos</a>
+                    <a href="https://github.com/AldenirLuiz/Old-School">Colabore</a>
+                    <a href="https://aldenirluiz.github.io/Portifolio/">Contact-me</a>
+                </div>
+                
             </nav>
-        </div>
+        </menu>
+        
     </header>
     <main>
+        <div class="flip-card-front"></div>
         <aside>
             <div class="nav-logo">
                 <img id="img-prof" src="sub/img/channels4_profile.jpg" alt="">
