@@ -467,11 +467,11 @@ table{
         justify-content: center;
         
     }
-
-    
 }
 
 footer {
+    display: flex;
+    flex-direction: row;
     bottom: 0;
     width: 100%;
     padding: 0;
