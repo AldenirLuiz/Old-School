@@ -2,12 +2,21 @@ body{
     margin: 0px;
     padding: 0px;
     text-shadow: 0 0 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    justify-content: center;
 }
 
-
 aside{
+    display: flex;
+    flex-direction: column;
     width: 20vw;
+    height: 100%;
     border-right: 1px solid gray;
+}
+
+.in-block{
+    padding: 4px;
 }
 
 .nav-logo{
@@ -20,30 +29,26 @@ aside{
 }
 
 #img-prof{
-    width: 180px;
-    height: 180px;
+    max-width: 50%;
     border-radius: 50%;
     box-shadow: 0 0 16px;
 }
 
-header, footer{
+header{
     width: 100%;
-    height: 100px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     padding: 0;
     margin: 0;
+    align-items: center;
     box-shadow: 0 0 8px ;
 }
 
-footer{
-    margin-top: 12px;
-}
 
 header div{
     margin: 4px;
     width: 50%;
-    height: 95%;
 }
 
 header .menu-nav{
@@ -57,7 +62,7 @@ header .menu-nav a{
     margin: 4px;
     color: black;
     text-decoration: none;
-    font-size: 20pt;
+    font-size: 16pt;
 }
 
 header .menu-nav a:not(:last-child){
@@ -68,6 +73,8 @@ main{
     margin-top: 12px;
     display: flex;
     flex-direction: row;
+    height: 100%;
+    width: 100%;
 }
 
 main section .main-blocks-descript{
@@ -75,17 +82,10 @@ main section .main-blocks-descript{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-}
-
-main section{
-    width: 100vw;
-    transition: all .4s;
 }
 
 .container-iframe{
     display: block;
-    background-color: aqua;
     width: 100%;
 }
 
@@ -117,7 +117,7 @@ main section{
     display: none;
     position: absolute;
     opacity: 0;
-    background: rgba(0, 50, 0, 1);
+    background: #006600 ;
     color: #fff;
     padding: 5px;
     border-radius: 4px;
@@ -133,7 +133,7 @@ main section{
     display:block;
     width: 50px;
     height: 50px;
-    background: rgba(0, 50, 0, 1);
+    background: #006600 ;
     transform: rotate(45deg);
     bottom: -20px;
     left: 50px;
@@ -165,8 +165,12 @@ main section{
     background: rgba(255, 0,0, .2)
 }
 
+.tag-down{
+    position: relative;
+}
+
 .tag-down span{
-    bottom: 10%;
+    bottom: 0;
 }
 .main-blocks .card-title{
     padding: 0;
@@ -237,4 +241,251 @@ main section{
 
 #container-iframe{
     max-width: 100%;
+}
+
+.footer-logo {
+    /* Adicionei uma classe para o logo no footer, você pode personalizar conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100%; /* Certifique-se de que ocupa toda a altura do footer */
+    border-right: 1px solid gray; /* Linha de separação entre as seções do footer */
+}
+
+.footer-logo img {
+    /* Estilos para a imagem do logo, ajuste conforme necessário */
+    width: 70%;
+    height: auto;
+}
+
+.footer-left{
+    display: flex;
+    max-width: 200px;
+    margin: 2px;
+    padding: 2px;
+}
+.footer-right{
+    font-size: 8pt;
+    text-align: right;
+}
+
+.footer-nav {
+    /* Adicionei uma classe para a navegação no footer, você pode personalizar conforme necessário */
+    display: flex;
+    align-items: center;
+}
+
+.footer-nav a {
+    /* Estilos para os links no footer */
+    padding: 0px;
+    margin: 0 12px; /* Ajuste o espaçamento entre os links conforme necessário */
+    color: black;
+    text-decoration: none;
+    font-size: 14pt; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+}
+
+section article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+}
+
+section article h1{
+    align-self: flex-start;
+    text-align: start;
+    font-size: 22pt;
+}
+
+section article p{
+    text-align: left;
+    padding-bottom: 12px;
+    align-self: start;
+}
+
+section article p strong{
+    max-width: fit-content;
+}
+
+section * h3{
+    text-align: left;
+    margin-top: 50px;
+}
+
+.in-article-container{
+    margin-bottom: 14px;
+}
+
+.img-left-middle{
+    float: left;
+    margin-right: 20px;
+}
+
+.img-right-middle{
+    float: right;
+    margin-left: 20px;
+}
+
+
+.in-article-img{
+    width: 200px;
+}
+
+
+.in-article-container-text{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-img-large{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.in-article-img-large{
+    margin: 12px;
+    width: 100%;
+}
+
+.text-in-article-right{
+    text-align: right;
+}
+
+.code-container{
+    display:block;
+    width: 70%;
+}
+
+.python {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: left;
+    text-shadow: 0 0 1px;
+}
+
+.code-container pre{
+    margin: 0;
+    padding: 0;
+}
+
+.code-container .targe{
+    text-align: end;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+}
+
+table{
+    padding: 0;
+    margin: 0;
+    border: solid black 1px;
+    border-radius: 6px;
+}
+
+
+.table-cell{
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    text-align: center;
+    border-bottom: solid black 1px;
+    border-right: solid black 1px ;
+    background: inherit;
+}
+
+
+@media only screen and (max-width: 920px){
+    main{
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside{
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        border-left: 0;
+        border: solid gray 1px;
+        
+        width: 100%;
+        height: 200px;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-logo{
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .social_media{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 200px;
+    }
+    .in-block{
+        display: flex;
+        flex-direction: row;
+        max-width: 140px;
+        max-height: 100px;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .in-block a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer{
+        max-height: 80px;
+    }
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: space-between; /* Adicionei esta propriedade para distribuir os elementos no footer */
+    box-shadow: 0 0 8px;
+    
 }
