@@ -1,10 +1,18 @@
+const home = window.location.href;
+
+
+if (sessionStorage.getItem('path') == null) {
+    sessionStorage.setItem('path', home)
+    console.log(sessionStorage.getItem('path'))
+}
+
+
 const mainsection = document.getElementById('container-iframe')
 const maingalery = document.getElementById('galery')
 const maintitle = document.getElementById('block-descript')
 const menu = document.getElementById('responsive-menu')
 
 var mainframe = document.getElementById('myObject')
-console.log(maintitle)
 
 function expandlink(source, size){
     maingalery.style.display = 'none';
@@ -19,11 +27,8 @@ function expandlink(source, size){
 }
 
 function remObject(){
-    mainframe.src = ''
-    mainframe.style.display = "none"
-    maingalery.style.display = 'flex';
-    maintitle.style.display = 'flex';
-    mainsection.style.display = 'none';
+    console.log(`MainHome: ${sessionStorage.getItem('path')}}`)
+    window.location.href = sessionStorage.getItem('path')
 }
 
 
