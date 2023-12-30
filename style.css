@@ -100,8 +100,7 @@ section article{
 }
 
 section article h1{
-    align-self: flex-start;
-    text-align: start;
+    align-self: center;
     font-size: 22pt;
 }
 
@@ -109,10 +108,7 @@ section article p{
     text-align: left;
     padding-bottom: 12px;
     align-self: start;
-}
-
-section article p strong{
-    max-width: fit-content;
+    text-shadow: none;
 }
 
 section * h3{
@@ -379,7 +375,8 @@ section * h3{
 
 .code-container{
     display:block;
-    width: 70%;
+    width: 90%;
+    max-width: 100%;
 }
 
 .python {
