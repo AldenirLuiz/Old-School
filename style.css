@@ -21,26 +21,6 @@ aside{
     border-right: 1px solid gray;
 }
 
-.in-block{
-    padding: 4px;
-}
-
-.nav-logo{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    max-height: 200px;
-    border-bottom: 1px solid gray;
-    align-items: center;
-    justify-content: center;
-}
-
-#img-prof{
-    max-width: 70%;
-    border-radius: 50%;
-    box-shadow: 0 0 16px;
-}
-
 header{
     width: 100%;
     height: 70px;
@@ -82,25 +62,85 @@ header .menu-nav a:not(:last-child){
     margin-right: 24px;
 }
 
-#main-header{
-    width: 100%;
-}
-
 main{
     margin-top: 12px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 100vh;
-    max-height: 100%;
-    max-width: 100%;
 }
 
-main section .main-blocks-descript{
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between; 
+    box-shadow: 0 0 8px;
+    
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+}
+
+section article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+}
+
+section article h1{
+    align-self: flex-start;
+    text-align: start;
+    font-size: 22pt;
+}
+
+section article p{
+    text-align: left;
+    padding-bottom: 12px;
+    align-self: start;
+}
+
+section article p strong{
+    max-width: fit-content;
+}
+
+section * h3{
+    text-align: left;
+    margin-top: 50px;
+}
+
+.main-blocks-descript{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.nav-logo{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-prof{
+    max-width: 70%;
+    border-radius: 50%;
+    box-shadow: 0 0 16px;
 }
 
 .container-iframe{
@@ -295,55 +335,6 @@ main section .main-blocks-descript{
     font-size: 14pt; 
 }
 
-footer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: space-between; 
-    box-shadow: 0 0 8px;
-    
-}
-
-
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all .4s;
-}
-
-section article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 700px;
-}
-
-section article h1{
-    align-self: flex-start;
-    text-align: start;
-    font-size: 22pt;
-}
-
-section article p{
-    text-align: left;
-    padding-bottom: 12px;
-    align-self: start;
-}
-
-section article p strong{
-    max-width: fit-content;
-}
-
-section * h3{
-    text-align: left;
-    margin-top: 50px;
-}
 
 .in-article-container{
     margin-bottom: 14px;
@@ -417,22 +408,15 @@ section * h3{
     background-color: black;
 }
 
-table{
-    padding: 0;
-    margin: 0;
-    border: solid black 1px;
-    border-radius: 6px;
-}
 
-
-.table-cell{
-    margin: 0;
-    padding: 0;
-    width: 250px;
-    text-align: center;
-    border-bottom: solid black 1px;
-    border-right: solid black 1px ;
-    background: inherit;
+#openMenu, #closeMenu{
+    border: none;
+    background: none;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
 }
 
 
@@ -503,28 +487,19 @@ table{
     }
 }
 
-#openMenu, #closeMenu{
-    border: none;
-    background: none;
-    font-size: 12pt;
-    font-weight: bold;
-    padding: 0px 5px 0px 5px;
-    cursor: pointer;
-    display: none;
-}
-
 @media only screen and (max-width: 925px){
   
     #openMenu{
         display: flex;
     }
 
-    #responsive-menu{
+    .menu-nav{
+        position: absolute;
+        display: flex;
+        min-width: 200px;
+        width: 100%;
         margin: 0;
         padding: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
     }
 
     .resp-button{
@@ -536,9 +511,19 @@ table{
         font-size: 32pt;
     }
 
+    .resp-button{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        
+    }
+
     #closeMenu{
-        display: block;
-        font-size: 40pt;
+        display: flex;
+        opacity: 1;
+        font-size: 32pt;
+        padding: 4px;
+        margin-top: 4px;
     }
 
     nav {

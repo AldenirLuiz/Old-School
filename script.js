@@ -37,7 +37,6 @@ openMenu.addEventListener('click', () => {
     menuLinks.style.width = "100%"
     menuLinks.style.opacity = 1
     menuLinks.style.background = 'white'
-	menuLinks.style.right = (menu.offsetWidth * -1) + 'px'
     openMenu.style.display = "none"
 })
 
