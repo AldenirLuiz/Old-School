@@ -221,10 +221,6 @@ section * h3{
     background: rgba(0, 255,0, .2);
 }
 
-#data-structure:hover{
-    background: rgba(255, 0,0, .2)
-}
-
 .tag-down{
     position: relative;
 }
