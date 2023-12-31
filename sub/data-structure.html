@@ -4,273 +4,427 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estrutura de Dados - Old School</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-    
+    <link rel="stylesheet" href="../highlight/styles/default.css">
+    <script src="../highlight/highlight.min.js"></script>
+    <script src="../highlight/languages/python.min.js"></script>
+
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style-buttons.css">
 </head>
 <body>
-    <section>
-        <article>
-            <h1>Introdução a estrutura de dados em Python</h1>
-            <p>Python conta com uma das estruturas de dados mais completas e robustas das linguagens, alinhada a sua sintaxe simples a linguagem Python tornou se a queridinha dos profissionais de dados de inteligencia artificial e aprendizado de maquina.</p>
-
-            <h3>Principais estruturas de dados em Python</h3>
-
-            <p>As estruturas de dados em Python são implementadas como objetos, e elas incluem tipos como listas, tuplas, conjuntos, dicionários, strings, entre outros. Cada uma dessas estruturas de dados tem suas próprias características e métodos específicos.</p>
-
-            <h3>Listas em Python</h3>
-            <p>Uma lista em Python é uma estrutura de dados que contém uma sequência ordenada de elementos. Você pode acessar, adicionar ou remover elementos da lista usando métodos específicos associados a objetos do tipo lista.</p>
-            <div class="code-container">
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # Assim podemos declarar um lista vazia
-    my_list = list() # list() instancia um objeto da classe List
-
-    # Também podemos instaciar o mesmo objeto da seguinte forma:
-    my_list:List = [] # o typeHint :list é opcional
-    
-                    </code>
-                </pre>
+    <main>
+        <aside>
+            <div class="nav-logo">
+                <img id="img-prof" src="img/channels4_profile.jpg" alt="">
             </div>
-
-            <p>Podemos declarar um objeto do tipo <strong>list</strong> de variadas formas, acima instanciamos um objeto <strong> <i>list()</i> </strong> diretamente usando uma instancia de objeto, isto cria uma lista vazia e atribui a mesma a variavel <strong>my_list</strong> da mesma forma usando <strong><i>my_list = []</i></strong></p>
-            <p>Posso declarar uma lista e adicionar valores a ela no ato?</p>
-            <p>Sim, de forma pratica e simples.</p>
-
-            <div class="code-container">
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # Assim podemos declarar uma lista com conteúdo
-    my_list = list((8, 2, 5654, 1.2, "python"))
-
-    # Também podemos instanciar o mesmo objeto da seguinte forma:
-    my_list:List = [8, 2, 5654, 1.2, "python"] # o typeHint :list é opcional
+            <div class="social_media">
+                <div class="in-block">
+                    <a class="linkedin" href="https://www.linkedin.com/in/aldenir-luiz-0137911ba/" title="linkedin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40pt" height="40pt" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
+                        </svg>
+                        <span class="name">Linkedin</span>
+                    </a>
+                </div>
     
-                    </code>
-                </pre>
-            </div>
-
-            <p>Note que no código acima a segunda opção parece muito mais simples e direta que a primeira e realmente é mas ambas e estão corretas e funcionam da mesma forma, no entanto se voce quiser adicionar cada item separadamente voce pode utilizar os métodos de inserção da classe List que são:</p>
-
-            <p>
-            <br><br><strong>append() - </strong> O Método <i>.append(item)</i> adiciona o item ao final da coleção atribuindo ao mesmo o ultimo índice da lista.
-            </p>
-
-            <div class="code-container">
-                <h4>Exemplo de uso do metodo .append():</h4>
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # declare a variavel my_list
-    my_list = list()
+                <div class="in-block">
+                    <a class="github" href="https://github.com/AldenirLuiz" title="github">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40pt" height="40pt" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                        </svg>
+                        <span class="name">GitHub</span>
+                    </a>
+                </div>
     
-    # usando o metodo .append() adicionamos o item
-    my_list.append("Python Old-School")
-
-    # imprima seu conteudo no console:
-    print(my_list) # Resultado no console: ['Python Old-School']
+                <div class="in-block">
+                    <a class="youtube" href="https://www.youtube.com/channel/UC99N4jVJ2UssK9JwM3dMy3Q" title="youtube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40pt" height="40pt" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408z"/>
+                        </svg>
+                        <span class="name">YouTube</span>
+                    </a>
+                </div>
     
-                    </code>
-                </pre>
-            </div>
-
-            <p><strong>insert() - </strong>  O Método <i>.insert(index, item)</i> adiciona o item no índice informado, fazendo com que o item que ocupava este índice tenha índice+1 assim para todos os items ate o ultimo somando +1 ao índice anterior a esta ação. Lembre que para usar o método <i>.insert()</i> em versões anteriores do python voce deve certificar se o índice a ser adicionado existe na coleção, do contrario a inserção pode gerar um erro de indexação, nas versões atuais caso a coleção não tenha o índice informado o item sera adicionado ao final da lista sem problemas.</p>
-
-            <div class="code-container">
-                <h4>Exemplo de uso do metodo .insert():</h4>
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # declare a variavel my_list
-    my_list = [5654, 1.2, "python"]
-    
-    # usando o metodo .insert() adicionamos o item no index 1 (segundo item da lista)
-    my_list.insert(1, "Python Old-School")
-
-    # imprima seu conteudo no console:
-    print(my_list) # Resultado no console: [5654, 'Python Old-School', 1.2, 'python']
-    
-                    </code>
-                </pre>
-            </div>
-
-            <p><strong>extend() - </strong> O Método <i>.extend()</i> é um método especial capaz de absorver outras coleções, sejam do tipo list ou não. O Método <i>.extend()</i> como o próprio nome ja diz estende o conteúdo da lista com o conteúdo da coleção alvo fazendo com que os items da coleção alvo façam parte da lista</p>
-            </p>
-
-            <div class="code-container">
-                <h4>Exemplo de uso do metodo .extend():</h4>
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # criamos as listas my_list1 e my_list2
-    my_list1 = [5654, 1.2, "python"]
-    my_list2 = ["hello, world!", "Python Old-School"]
-    
-    # usando o metodo .extend() estendemos my_list1 com os item de my_list2
-    my_list1.extend(my_list2)
-
-    # imprima seu conteudo no console:
-    print(my_list1) # Resultado no console: [5654, 1.2, 'python', 'hello, world!', 'Python Old-School']
-    
-                    </code>
-                </pre>
-            </div>
-
-        <h4>Saiba mais sobre os métodos de lista neste artigo: <a href="#">Saiba tudo sobre Listas em Python</a></h4><br><br><br>
-
-        <p>
-            Dando continuidade sobre os tipos de coleções em python vamos entender um poco sobre <strong><i> tuplas</i></strong>.
-        </p>
-
-        <h3>Tuplas em Python</h3>
-
-        <p>Em Python, uma tupla é uma estrutura de dados semelhante a uma lista, mas com uma diferença fundamental: as tuplas são imutáveis. Isso significa que, uma vez que você cria uma tupla, não pode modificá-la, adicionar elementos a ela ou removê-los. No entanto, você pode acessar elementos individuais e realizar algumas operações.</p>
-
-        <div class="code-container">
-            <h4>Como criamos uma tupla</h4>
-            <pre>
-                <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # podemos instanciar um objeto do tipo tuple
-    my_tuple = tuple()
-
-    # ou simplesmente usando este metodo
-    my_tuple :tuple = () # o typeHint :tuple é opcional
-
-    """ambas as formas sao validas mas por ser imutável, uma tupla inicializada
-       desta forma torna-se inútil pelo fato de ser imutável"""
-
-    # o uso correto seria:
-    my_tuple = (1, 0.54234, 1.131415, 0)
-
-                </code>
-            </pre>
-        </div>
-
-        <p>Ao criar uma tupla devemos nos atentar pelo fato de que após criada esta nao poderá ser modificada, permitindo assim apenas ser acessada para leitura.</p>
-
-        <p><strong>E para que serve uma tupla se eu não posso modificar? </strong></p>
-        <p>As tuplas são úteis quando você deseja garantir que os dados não sejam alterados acidentalmente e para situações em que a imutabilidade é desejada. Elas são frequentemente usadas para representar coleções ordenadas e heterogêneas de valores.</p>
-        <p>
-        Justamente por ser imutável a <strong><i>tupla</i></strong> torna-se uma das principais estruturas de dados da linguagem, quando precisamos criar uma coleção onde os dados devem permanecer inalterados e organizados sempre na mesma sequência uma tupla se qualifica perfeitamente para a função tornando-se indispensável para o sistema.
-        </p>
-        <p>O principal metodo de acesso a uma tupla é: <strong><i>my_tuple[2]</i></strong> veja um exemplo:</p> 
-
-        <div class="code-container">
-            <h4>Exemplo de acesso a uma tupla</h4>
-            <pre>
-                <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-
-    # instanciando:
-    my_tuple = (1, 0.54234, 1.131415, 0)
-
-    # acessando:
-    print(my_tuple[2]) # Resultado no console: 1.131415
-
-                </code>
-            </pre>
-        </div>
-
-        <P>Você também pode converter uma tupla em outro tipo de coleção.</P>
-        <div class="code-container">
-            <h4>Convertendo uma tupla em list</h4>
-            <pre>
-                <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-
-    # instanciando:
-    my_tuple = (1, 0.54234, 1.131415, 0)
-
-    # convertendo:
-    my_list = list(my_tuple)
-
-    # acessando:
-    print(my_list) # Resultado no console: [1, 0.54234, 1.131415, 0]
-    """ Neste caso nada foi perdido na variável my_tuple pois uma nova 
-        variável my_list foi criada e my_tuple permanece como sempre foi"""
-    
-    # agora vamos tornar a variável my_tuple em lista:
-    my_tuple = list(my_tuple) 
-    """Neste caso my_tuple deixa de ser uma tupla e torna se lista"""
-
-                </code>
-            </pre>
-        </div>
-
-        <P>Em seguida trataremos de uma estrutura de dados poderosa dentro da linguagem chamada dicionário ou <strong><i>dict()</i></strong></P>
-
-        <h3>Dicionarios em Python</h3>
-
-        <p>Em Python, dict é uma abreviação de "dicionário". Um dicionário é uma estrutura de dados que armazena pares chave-valor, onde cada chave única mapeia para um valor específico. Dicionários são conhecidos por oferecerem acesso rápido e eficiente aos valores com base em suas chaves.</p>
-
-        <div class="code-container">
-            <h4>Exemplo de como criamos um dicionario:</h4>
-            <pre>
-                <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-
-    # assim podemos declara uma variável do tipo Dict:
-    my_dict = dict()
-
-    # ou diretamente usando chaves {}
-    my_dict :dict = {} # o typeHint :dict e opcional
-
-    # também podemos declarar diretamente seu conteúdo:
-    my_dict = {"nome": "Aldenir", "sobrenome": "Luiz", "idade": 29}
-
-    print(my_dict) # resultado no console: {'nome': 'Aldenir', 'sobrenome': 'Luiz', 'idade': 29}
-
-                </code>
-            </pre>
-        </div>
-
-        <p>A principio não parece uma estrutura de dados muito amigável... Mas sim, dicionarios são estruturas de dados muito robustas e faces de manipular</p>
-
-        <p>diferentemente a listas e outras colecoes o acesso aos dados em um dicionario se da pelas chaves <strong><i>my_dict["key"]</i></strong></p>
+                <div class="in-block">
+                    <a class="facebook" href="https://www.facebook.com/aldenir.luiz" title="facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40pt" height="40pt" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                          </svg>
+                        <span class="name">Facebook</span>
+                    </a>
+                </div>
+                <div class="in-block">
+                    <a class="instagram" href="https://www.instagram.com/aldenir.7.pryce/" title="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40pt" height="40pt" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg>
+                        <span class="name">Instagram</span>
+                    </a>
+                </div>
         
-        <div class="code-container">
-            <h4>Exemplo de acesso aos dados:</h4>
-            <pre>
-                <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # crimos o dicionario                
-    my_dict = {"nome": "Aldenir", "sobrenome": "Luiz", "idade": 29}
-
-    # acessamos o valor nome
-    print(my_dict["nome"]) # resultado no console: Aldenir
-
-                </code>
-            </pre>
+            </div>
+        </aside>
+        <section id="main-header">
+            <article>
+                <h1>Introdução a estrutura de dados em Python</h1>
+                <p>Python conta com uma das estruturas de dados mais completas e robustas das linguagens, alinhada a sua sintaxe simples a linguagem Python tornou se a queridinha dos profissionais de dados de inteligencia artificial e aprendizado de maquina.</p>
+    
+                <strong><i><p>Seria interessante antes de prosseguir neste artigo aprender um pouco sobre indices na linguagem Python, voce pode conferir um artigo sobre o assunto aqui: <a href="#">Acesso e indexação em Python</a></p></i></strong>
+    
+                <h3>Principais estruturas de dados em Python</h3>
+    
+                <p>As estruturas de dados em Python são implementadas como objetos, e elas incluem tipos como listas, tuplas, conjuntos, dicionários, strings, entre outros. Cada uma dessas estruturas de dados tem suas próprias características e métodos específicos.</p>
+    
+                <h3>Listas em Python</h3>
+                <p>Uma lista em Python é uma estrutura de dados que contém uma sequência ordenada de elementos. Você pode acessar, adicionar ou remover elementos da lista usando métodos específicos associados a objetos do tipo lista.</p>
+                <div class="code-container">
+                    <pre>
+                        <code class="python">
+        # Assim podemos declarar um lista vazia
+        my_list = list() # list() instancia um objeto da classe List
+    
+        # Também podemos instanciar o mesmo objeto da seguinte forma:
+        my_list:List = [] # o typeHint :list é opcional
+        
+                        </code>
+                    </pre>
+                </div>
+    
+                <p>Podemos declarar um objeto do tipo <strong>list</strong> de variadas formas, acima instanciamos um objeto <strong> <i>list()</i> </strong> diretamente usando uma instancia de objeto, isto cria uma lista vazia e atribui a mesma a variável <strong>my_list</strong> da mesma forma usando <i >my_list = []</i></p>
+                <p>Posso declarar uma lista e adicionar valores a ela no ato?</p>
+                <p>Sim, de forma pratica e simples.</p>
+    
+                <div class="code-container">
+                    <pre>
+                        <code class="python">
+        # Assim podemos declarar uma lista com conteúdo
+        my_list = list((8, 2, 5654, 1.2, "python"))
+    
+        # Também podemos instanciar o mesmo objeto da seguinte forma:
+        my_list:List = [8, 2, 5654, 1.2, "python"] # o typeHint :list é opcional
+        
+                        </code>
+                    </pre>
+                </div>
+    
+                <p>Note que no código acima a segunda opção parece muito mais simples e direta que a primeira e realmente é mas ambas e estão corretas e funcionam da mesma forma, no entanto se voce quiser adicionar cada item separadamente voce pode utilizar os métodos de inserção da classe List que são:</p>
+    
+                <p>
+                <br><br><strong>append() - </strong> O Método <i>.append(item)</i> adiciona o item ao final da coleção atribuindo ao mesmo o ultimo índice da lista.
+                </p>
+    
+                <div class="code-container">
+                    <h4>Exemplo de uso do método .append():</h4>
+                    <pre>
+                        <code class="python">
+        # declare a variável my_list
+        my_list = list()
+        
+        # usando o método .append() adicionamos o item
+        my_list.append("Python Old-School")
+    
+        # imprima seu conteúdo no console:
+        print(my_list) # Resultado no console: ['Python Old-School']
+        
+                        </code>
+                    </pre>
+                </div>
+    
+                <p><strong>insert() - </strong>  O Método <i>.insert(index, item)</i> adiciona o item no índice informado, fazendo com que o item que ocupava este índice tenha índice+1 assim para todos os items ate o ultimo somando +1 ao índice anterior a esta ação. Lembre que para usar o método <i>.insert()</i> em versões anteriores do python voce deve certificar se o índice a ser adicionado existe na coleção, do contrario a inserção pode gerar um erro de indexação, nas versões atuais caso a coleção não tenha o índice informado o item sera adicionado ao final da lista sem problemas.</p>
+    
+                <div class="code-container">
+                    <h4>Exemplo de uso do método .insert():</h4>
+                    <pre>
+                        <code class="python">
+        # declare a variável my_list
+        my_list = [5654, 1.2, "python"]
+        
+        # usando o método .insert() adicionamos o item no index 1 (segundo item da lista)
+        my_list.insert(1, "Python Old-School")
+    
+        # imprima seu conteúdo no console:
+        print(my_list) # Resultado no console: [5654, 'Python Old-School', 1.2, 'python']
+        
+                        </code>
+                    </pre>
+                </div>
+    
+                <p><strong>extend() - </strong> O Método <i>.extend()</i> é um método especial capaz de absorver outras coleções, sejam do tipo list ou não. O Método <i>.extend()</i> como o próprio nome ja diz estende o conteúdo da lista com o conteúdo da coleção alvo fazendo com que os items da coleção alvo façam parte da lista</p>
+                </p>
+    
+                <div class="code-container">
+                    <h4>Exemplo de uso do método .extend():</h4>
+                    <pre>
+                        <code class="python">
+        # criamos as listas my_list1 e my_list2
+        my_list1 = [5654, 1.2, "python"]
+        my_list2 = ["hello, world!", "Python Old-School"]
+        
+        # usando o método .extend() estendemos my_list1 com os item de my_list2
+        my_list1.extend(my_list2)
+    
+        # imprima seu conteúdo no console:
+        print(my_list1) # Resultado no console: [5654, 1.2, 'python', 'hello, world!', 'Python Old-School']
+        
+                        </code>
+                    </pre>
+                </div>
+    
+            <h4>Saiba mais sobre os métodos de lista neste artigo: <a href="#">Saiba tudo sobre Listas em Python</a></h4><br><br><br>
+    
+            <p>
+                Dando continuidade sobre os tipos de coleções em python vamos entender um poco sobre <i> tuplas</i>.
+            </p>
+    
+            <h3>Tuplas em Python</h3>
+    
+            <p>Em Python, uma tupla é uma estrutura de dados semelhante a uma lista, mas com uma diferença fundamental: as tuplas são imutáveis. Isso significa que, uma vez que você cria uma tupla, não pode modificá-la, adicionar elementos a ela ou removê-los. No entanto, você pode acessar elementos individuais e realizar algumas operações.</p>
+    
+            <div class="code-container">
+                <h4>Como criamos uma tupla</h4>
+                <pre>
+                    <code class="python">
+        # podemos instanciar um objeto do tipo tuple
+        my_tuple = tuple()
+    
+        # ou simplesmente usando este método
+        my_tuple :tuple = () # o typeHint :tuple é opcional
+    
+        """ambas as formas sao validas mas por ser imutável, uma tupla inicializada
+           desta forma torna-se inútil pelo fato de ser imutável"""
+    
+        # o uso correto seria:
+        my_tuple = (1, 0.54234, 1.131415, 0)
+    
+                    </code>
+                </pre>
+            </div>
+    
+            <p>Ao criar uma tupla devemos nos atentar pelo fato de que após criada esta nao poderá ser modificada, permitindo assim apenas ser acessada para leitura.</p>
+    
+            <p><strong>E para que serve uma tupla se eu não posso modificar? </strong></p>
+            <p>As tuplas são úteis quando você deseja garantir que os dados não sejam alterados acidentalmente e para situações em que a imutabilidade é desejada. Elas são frequentemente usadas para representar coleções ordenadas e heterogêneas de valores.</p>
+            <p>
+            Justamente por ser imutável a <strong><i>tupla</i></strong> torna-se uma das principais estruturas de dados da linguagem, quando precisamos criar uma coleção onde os dados devem permanecer inalterados e organizados sempre na mesma sequência uma tupla se qualifica perfeitamente para a função tornando-se indispensável para o sistema.
+            </p>
+            <p>O principal método de acesso a uma tupla é: <i>my_tuple[index]</i> veja um exemplo:</p> 
+    
+            <div class="code-container">
+                <h4>Exemplo de acesso a uma tupla</h4>
+                <pre>
+                    <code class="python">
+    
+        # instanciando:
+        my_tuple = (1, 0.54234, 1.131415, 0)
+    
+        # acessando:
+        print(my_tuple[2]) # Resultado no console: 1.131415
+    
+                    </code>
+                </pre>
+            </div>
+    
+            <P>Você também pode converter uma tupla em outro tipo de coleção.</P>
+            <div class="code-container">
+                <h4>Convertendo uma tupla em list</h4>
+                <pre>
+                    <code class="python">
+    
+        # instanciando:
+        my_tuple = (1, 0.54234, 1.131415, 0)
+    
+        # convertendo:
+        my_list = list(my_tuple)
+    
+        # acessando:
+        print(my_list) # Resultado no console: [1, 0.54234, 1.131415, 0]
+        """ Neste caso nada foi perdido na variável my_tuple pois uma nova 
+            variável my_list foi criada e my_tuple permanece como sempre foi"""
+        
+        # agora vamos tornar a variável my_tuple em lista:
+        my_tuple = list(my_tuple) 
+        """Neste caso my_tuple deixa de ser uma tupla e torna se lista"""
+    
+                    </code>
+                </pre>
+            </div>
+    
+            <P>Em seguida trataremos de uma estrutura de dados poderosa dentro da linguagem chamada dicionário ou <strong><i>dict()</i></strong></P>
+    
+            <h3>Dicionários em Python</h3>
+    
+            <p>Em Python, dict é uma abreviação de "dicionário". Um dicionário é uma estrutura de dados que armazena pares chave-valor, onde cada chave única mapeia para um valor específico. Dicionários são conhecidos por oferecerem acesso rápido e eficiente aos valores com base em suas chaves.</p>
+    
+            <div class="code-container">
+                <h4>Exemplo de como criamos um dicionario:</h4>
+                <pre>
+                    <code class="python">
+    
+        # assim podemos declara uma variável do tipo Dict:
+        my_dict = dict()
+    
+        # ou diretamente usando chaves {}
+        my_dict :dict = {} # o typeHint :dict e opcional
+    
+        # também podemos declarar diretamente seu conteúdo:
+        my_dict = {"nome": "Aldenir", "sobrenome": "Luiz", "idade": 29}
+    
+        print(my_dict) # resultado no console: {'nome': 'Aldenir', 'sobrenome': 'Luiz', 'idade': 29}
+    
+                    </code>
+                </pre>
+            </div>
+    
+            <p>A principio não parece uma estrutura de dados muito amigável... Mas sim, dicionários são estruturas de dados muito robustas e faces de manipular</p>
+    
+            <p>diferentemente a listas e outras coleções o acesso aos dados em um dicionario se da pelas chaves <strong><i>my_dict["key"]</i></strong></p>
+            
+            <div class="code-container">
+                <h4>Exemplo de acesso aos dados:</h4>
+                <pre>
+                    <code class="python">
+        # criamos o dicionario                
+        my_dict = {"nome": "Aldenir", "sobrenome": "Luiz", "idade": 29}
+    
+        # acessamos o valor nome
+        print(my_dict["nome"]) # resultado no console: Aldenir
+    
+                    </code>
+                </pre>
+            </div>
+    
+            <p>Assim como acessamos os dados através de chaves podemos adicionar ou modificar os dados de forma semelhante: </p>
+    
+            <div class="code-container">
+                <h4>Exemplo de inserção de dados:</h4>
+                <pre>
+                    <code class="python">
+        # criamos o dicionario                
+        my_dict = dict()
+    
+        # adicione os dados
+        my_dict["nome"] = "João"
+        my_dict["sobrenome"] = "Silva"
+    
+        # acessamos o valor nome
+        print(my_dict["sobrenome"]) # resultado no console: Silva
+    
+                    </code>
+                </pre>
+            </div>
+    
+            <p>Os dicionários são uma estrutura de dados versátil e amplamente utilizada em Python, adequada para mapear relações entre diferentes conjuntos de dados e organizar informações de maneira eficiente. Eles são frequentemente empregados em situações em que é necessário associar dados relacionados uns aos outros.</p>
+    
+            <p>Dicionários são uma estrutura de dados muito abrangente e o conteúdo de estudo sobre este assunto pode ser bem extenso, voce pode aprender mais sobre dicionários neste artigo: <a href="#">A chave para entender o valor de um dicionario em Python</a></p>
+    
+            <p>
+                A seguir falaremos sobre uma das estruturas de dados mais utilizadas em todas as linguagens, as strings em python representada por <strong><i>str</i></strong>
+            </p>
+    
+            <h3>Strings em Python</h3>
+    
+            <p>
+                Em Python, uma string é uma sequência de caracteres. Elas são usadas para armazenar e manipular texto. Assim como as tuplas as strings são imutáveis, o que significa que, uma vez criadas, não podem ser modificadas. Vamos abordar alguns conceitos e operações básicas relacionadas a strings em Python:
+            </p>
+    
+            <div class="code-container">
+                <h4>Exemplo de como criamos uma string:</h4>
+                <pre>
+                    <code class="python">
+        # criando uma string                
+        my_string = "Hello World!"
+    
+        # podemos também usar single-quotes:
+        my_string = 'Hello World!'
+    
+        print(my_string) # resultado no console: Hello World!
+                    </code>
+                </pre>
+            </div>
+    
+            <p>Assim como nas coleções, numa string voce pode acessar as sequências de caracteres por meio de seu index:</p>
+            <div class="code-container">
+                <h4>acessando caracteres numa string:</h4>
+                <pre>
+                    <code class="python">
+        # crie uma string                
+        my_string = "Hello World!"
+    
+        print(my_string[6]) # resultado no console: W
+        """contando a partir de 0 como em toda indexação, 
+           o W esta da posição 6 da string"""
+    
+        # usando um slice podemos acessar uma paste da string:
+        print(my_string[6:11]) # resultado no console: World!
+        """Usando simbolo : dentro dos colchetes podemos controlar 
+           o range de acesso sendo: string[inicial:final] """
+    
+                    </code>
+                </pre>
+            <span><i>*slices podem ser usados em qualquer outro tipo de coleção, desde que esta tenha acesso por index</i></span><br><br>
+            </div>
+    
+            <p>
+                Como as strings são coleções imutáveis, nao podemos adicionar itens a uma string a menos que seja por reatribuição da variável.
+            </p>
+            <p>Assim como em outras coleções, strings em python contam com um grande arsenal de ferramentas builtIns, métodos como <strong><i>string.upper()</i></strong>, <strong><i>string.lower()</i></strong>, <strong><i>string.isapha()</strong></i>, dentre muitos outros métodos, tornam a manipulação de strings uma tarefa muito mais completa e simples.</p>
+    
+            <p>Strings em python pode ser um assunto muito extenso, se quiser se aprofundar mais neste assunto leia: <a href="#">Strings em Python: Cabo de Guerra.</a></p>
+    
+            <p><strong><i>Este foi um resumo das principais estruturas de dados em Python, você pode acessar os artigos citados ao longo deste modulo para aperfeiçoar seus conhecimentos. Bons estudos e até o proximo módulo.</i></strong></p>
+    
+            </article>
+            <div class="buttons">
+                <div>
+                    <button class="button">
+                        <svg href="#" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="home">
+                    <button class="button" onclick="remObject()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                        </svg>
+                        HOME
+                    </button>
+                </div>
+                <div href="#">
+                    <button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <div class="footer-logo">
+            <!-- Inclua aqui o seu logo no footer -->
+            <img src="img/mainlogo.png" alt="Logo do Site">
         </div>
-
-        <p>Assim como acessamos os dados através de chaves podemos adicionar ou modificar os dados de forma semelhante: </p>
-
-        <div class="code-container">
-            <h4>Exemplo de insercao de dados:</h4>
-            <pre>
-                <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # criamos o dicionario                
-    my_dict = dict()
-
-    # adicione os dados
-    my_dict["nome"] = "Joao"
-    my_dict["sobrenome"] = "Silva"
-
-    # acessamos o valor nome
-    print(my_dict["sobrenome"]) # resultado no console: Silva
-
-                </code>
-            </pre>
+        <div class="footer-left">
+            <h2>Aldenir Luiz</h2>
+            <h5>Creative commons 2023/2024</h5>
         </div>
+        
+        <div class="footer-right">
+            <div class="license">
+                Este trabalho está licenciado sob uma <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Licença Creative Commons Atribuição-NãoComercial 4.0 Internacional</a>.
+            </div>
+            
+        </div>
+    </footer>
 
-        <p>Os dicionários são uma estrutura de dados versátil e amplamente utilizada em Python, adequada para mapear relações entre diferentes conjuntos de dados e organizar informações de maneira eficiente. Eles são frequentemente empregados em situações em que é necessário associar dados relacionados uns aos outros.</p>
-
-        <p>Dicionários são uma estrutura de dados muito abrangente e o conteúdo de estudo sobre este assunto pode ser bem extenso, voce pode aprender mais sobre dicionários neste artigo: <a href="#">A chave para entender o valor de um dicionario em Python</a></p>
-
-        <h3>Este modulo foi pausado, ainda temos conteúdo a adicionar, esperamos voce em breve breve.</h3>
-
-        </article>
-    </section>
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
-        document.querySelectorAll('code').forEach((block) => {
-            hljs.highlightBlock(block);
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
         });
-    });
-</script>
+    });</script>
+
 </html>
