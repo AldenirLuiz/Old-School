@@ -5,147 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+    <title>Estrutura de Dados - Old School</title>
+    <link rel="stylesheet" href="../highlight/styles/default.css">
+    <script src="../highlight/highlight.min.js"></script>
+    <script src="../highlight/languages/python.min.js"></script>
+
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style-buttons.css">
 </head>
 <body>
-    <section>
-        <article>
-            <h1>
-                Introdução à Sintaxe da Linguagem Python: Uma Visão Abrangente
-            </h1>
-
-            <p>Python, uma linguagem de programação de alto nível, é conhecida por sua sintaxe limpa e legível, tornando-a uma escolha popular entre desenvolvedores de todos os níveis. Neste artigo, exploraremos a sintaxe do Python, começando pela estrutura básica de um script e, em seguida, mergulhando em tópicos como variáveis, tipos, palavras reservadas e convenções da linguagem.</p>
-
-            <h3>Estrutura de um Script Python</h3>
-            <p>Um script Python é composto por linhas de código que são executadas sequencialmente. O código é organizado em blocos usando indentação, o que elimina a necessidade de chaves ou palavras-chave de fim de bloco. Aqui está um exemplo básico de script Python:</p>
-            
-            <div class="code-container">
-                
-                
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    # Isto é um comentário em Python
-    print("Olá, Mundo!")
-                    </code>
-                </pre>
-            </div>
-
-            <p>O caractere # é usado para comentários em Python, e tudo após ele na mesma linha é tratado como um comentário.
-                Já a palavra <Strong>print</Strong> é uma das varias palavras reservadas da linguagem (trataremos disso mais adiante)
-                <strong>print()</strong> é uma funcao interna da linguagem que serve para transmitir dados para o console, tornando possivel 
-                a exibição das informações adicionadas dentro dos parenteses ( ) desde que os dados obedeçam aos requisitos, os dados devem ser 
-                do tipo string ou possam ser convertidos em string, char ou byte (Falaremos de tipos de dados adiante) a conversao de tipos ocorre 
-                automaticamente dentro da função, então nao se atenha a estes detalhes no momento.
-            </p>
-
-            <h3>Variáveis e Tipos</h3>
-            <p><strong> Variáveis...</strong></p>
-            <p>Variáveis em Python (e em qualquer outra linguagem) são usadas para armazenar dados na memória. Uma variável é criada quando você atribui um valor a ela
-                utilizando o simbolo de igualdade ( = ) <br> da seguinte forma: <strong> nome_da_variavel = valor </strong> <br> 
-                O nome da variável deve começar com uma letra ou sublinhado, seguido por letras, números ou sublinhados. Exemplos:</p>
-
-            <div class="code-container">
-                <pre><code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    nome = "João"
-    idade = 25
-                </code></pre>
-            </div>
-
-            <p>
-                Quando você reatribui um valor a mesma variável esta sempre tera o ultimo valor atribuído a ela e os valores anteriores serão perdidos.
-            </p>
-
-            <p>Veja este exemplo:</p>
-
-            <div class="code-container">
-                <pre><code class="python"><div class="targe"><span class="spancode">Código em python</span></div>
-    nome = "João"
-    idade = 25
-
-    nome = "Maria"
-    idade = "33"
-
-    print(maria) # Será exibido no terminal: Maria
-    print(idade) # Será exibido no terminal: 33
-                </code></pre>
-            </div>
-            
-            <br><br><br><p><strong> Tipos de Dados</strong></p>
-            <p>Python é uma linguagem dinamicamente tipada, o que significa que você não precisa declarar explicitamente o tipo de uma variável. 
-                Os tipos de dados comuns em Python incluem 
-                inteiros: <strong>int</strong>, 
-                números de ponto flutuante: <strong>float</strong>, 
-                strings: <strong>str</strong>, 
-                listas: <strong>list</strong>, 
-                tuplas <strong>tuple</strong>, 
-                dicionários <strong>dict</strong>, 
-                entre outros.</p>
-            <div class="code-container">
-                <pre><code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
-    numero = 42         # tipo: int
-    pi = 3.14           # tipo: float
-    nome = "Alice"      # tipo: str
-    lista = [1, 2, 3]   # tipo: list
-                </code></pre>
-            </div>
-
-            <p><br><br><br> <strong>Palavras Reservadas</strong></p>
-            <p>Python tem um conjunto de palavras reservadas que têm significados especiais e não podem ser usadas como identificadores (nomes de variáveis, funções, etc.). Algumas palavras reservadas comuns incluem <strong>if</strong>, <strong>else</strong>, <strong>for</strong>, <strong>while</strong>, <strong>def</strong>, <strong>class</strong>, <strong>True</strong>, <strong>False</strong>, e <strong>None</strong>.</p>
-            <p>Você pode visualizar uma lista completa com todas as palavras reservada aqui: <a href="table.html">Tabela</a></p>
-
-            
-            <h3>Convenções da Linguagem</h3>
-            <p>Python tem várias convenções que os desenvolvedores seguem para tornar o código mais legível e consistente. Algumas delas incluem:</p>
-            <p>PEP 8: Este é o guia de estilo oficial para Python. Ele abrange tópicos como indentação, espaçamento, nomeação de variáveis, etc.</p>
-
-            <div class="code-container">
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
-    # Ruim
-    nomeDeVariavel=42
-
-    # Bom
-    nome_de_variavel = 42
-
-                    </code>
-                </pre>
-            </div>
-            <p>Docstrings: Documentação embutida em código. Ajuda a entender a finalidade de funções e módulos.</p>
-            <div class="code-container">
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
-    def calcular_soma(a, b):
-        """
-        Esta função retorna a soma de dois números.
-        """
-        return a + b
-                    </code>
-                </pre>
-            </div>
-            <p>Nomeação de Variáveis: Use nomes descritivos para variáveis que expliquem seu propósito.</p>
-            <div class="code-container">
-                <pre>
-                    <code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
-    # Ruim
-    x = 5
+    <main>
+        <section>
+            <article>
+                <h1>
+                    Introdução à Sintaxe da Linguagem Python: Uma Visão Abrangente
+                </h1>
     
-    # Bom
-    quantidade_de_estudantes = 5
-                        
-                    </code>
-                </pre>
+                <p>Python, uma linguagem de programação de alto nível, é conhecida por sua sintaxe limpa e legível, tornando-a uma escolha popular entre desenvolvedores de todos os níveis. Neste artigo, exploraremos a sintaxe do Python, começando pela estrutura básica de um script e, em seguida, mergulhando em tópicos como variáveis, tipos, palavras reservadas e convenções da linguagem.</p>
+    
+                <h3>Estrutura de um Script Python</h3>
+                <p>Um script Python é composto por linhas de código que são executadas sequencialmente. O código é organizado em blocos usando indentação, o que elimina a necessidade de chaves ou palavras-chave de fim de bloco. Aqui está um exemplo básico de script Python:</p>
+                
+                <div class="code-container">
+                    
+                    
+                    <pre>
+                        <code class="python">
+        # Isto é um comentário em Python
+        print("Olá, Mundo!")
+                        </code>
+                    </pre>
+                </div>
+    
+                <p>O caractere # é usado para comentários em Python, e tudo após ele na mesma linha é tratado como um comentário.
+                    Já a palavra <Strong>print</Strong> é uma das varias palavras reservadas da linguagem (trataremos disso mais adiante)
+                    <strong>print()</strong> é uma funcao interna da linguagem que serve para transmitir dados para o console, tornando possivel 
+                    a exibição das informações adicionadas dentro dos parenteses ( ) desde que os dados obedeçam aos requisitos, os dados devem ser 
+                    do tipo string ou possam ser convertidos em string, char ou byte (Falaremos de tipos de dados adiante) a conversao de tipos ocorre 
+                    automaticamente dentro da função, então nao se atenha a estes detalhes no momento.
+                </p>
+    
+                <h3>Variáveis e Tipos</h3>
+                <p><strong> Variáveis...</strong></p>
+                <p>Variáveis em Python (e em qualquer outra linguagem) são usadas para armazenar dados na memória. Uma variável é criada quando você atribui um valor a ela
+                    utilizando o simbolo de igualdade ( = ) <br> da seguinte forma: <strong> nome_da_variavel = valor </strong> <br> 
+                    O nome da variável deve começar com uma letra ou sublinhado, seguido por letras, números ou sublinhados. Exemplos:</p>
+    
+                <div class="code-container">
+                    <pre><code class="python">
+        nome = "João"
+        idade = 25
+                    </code></pre>
+                </div>
+    
+                <p>
+                    Quando você reatribui um valor a mesma variável esta sempre tera o ultimo valor atribuído a ela e os valores anteriores serão perdidos.
+                </p>
+    
+                <p>Veja este exemplo:</p>
+    
+                <div class="code-container">
+                    <pre><code class="python">
+        nome = "João"
+        idade = 25
+    
+        nome = "Maria"
+        idade = "33"
+    
+        print(maria) # Será exibido no terminal: Maria
+        print(idade) # Será exibido no terminal: 33
+                    </code></pre>
+                </div>
+                
+                <br><br><br><p><strong> Tipos de Dados</strong></p>
+                <p>Python é uma linguagem dinamicamente tipada, o que significa que você não precisa declarar explicitamente o tipo de uma variável. 
+                    Os tipos de dados comuns em Python incluem 
+                    inteiros: <strong>int</strong>, 
+                    números de ponto flutuante: <strong>float</strong>, 
+                    strings: <strong>str</strong>, 
+                    listas: <strong>list</strong>, 
+                    tuplas <strong>tuple</strong>, 
+                    dicionários <strong>dict</strong>, 
+                    entre outros.</p>
+                <div class="code-container">
+                    <pre><code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
+        numero = 42         # tipo: int
+        pi = 3.14           # tipo: float
+        nome = "Alice"      # tipo: str
+        lista = [1, 2, 3]   # tipo: list
+                    </code></pre>
+                </div>
+    
+                <p><br><br><br> <strong>Palavras Reservadas</strong></p>
+                <p>Python tem um conjunto de palavras reservadas que têm significados especiais e não podem ser usadas como identificadores (nomes de variáveis, funções, etc.). Algumas palavras reservadas comuns incluem <strong>if</strong>, <strong>else</strong>, <strong>for</strong>, <strong>while</strong>, <strong>def</strong>, <strong>class</strong>, <strong>True</strong>, <strong>False</strong>, e <strong>None</strong>.</p>
+                <p>Você pode visualizar uma lista completa com todas as palavras reservada aqui: <a href="table.html">Tabela</a></p>
+    
+                
+                <h3>Convenções da Linguagem</h3>
+                <p>Python tem várias convenções que os desenvolvedores seguem para tornar o código mais legível e consistente. Algumas delas incluem:</p>
+                <p>PEP 8: Este é o guia de estilo oficial para Python. Ele abrange tópicos como indentação, espaçamento, nomeação de variáveis, etc.</p>
+    
+                <div class="code-container">
+                    <pre>
+                        <code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
+        # Ruim
+        nomeDeVariavel=42
+    
+        # Bom
+        nome_de_variavel = 42
+    
+                        </code>
+                    </pre>
+                </div>
+                <p>Docstrings: Documentação embutida em código. Ajuda a entender a finalidade de funções e módulos.</p>
+                <div class="code-container">
+                    <pre>
+                        <code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
+        def calcular_soma(a, b):
+            """
+            Esta função retorna a soma de dois números.
+            """
+            return a + b
+                        </code>
+                    </pre>
+                </div>
+                <p>Nomeação de Variáveis: Use nomes descritivos para variáveis que expliquem seu propósito.</p>
+                <div class="code-container">
+                    <pre>
+                        <code class="python"><div class="targe"><span class="spancode">Codigo em python</span></div>
+        # Ruim
+        x = 5
+        
+        # Bom
+        quantidade_de_estudantes = 5
+                            
+                        </code>
+                    </pre>
+                </div>
+                <p>Este artigo ofereceu uma visão abrangente da sintaxe da linguagem Python, cobrindo desde a estrutura básica de um script até variáveis, tipos, palavras reservadas e convenções da linguagem. Ao seguir as práticas recomendadas, os desenvolvedores podem criar código Python mais legível e fácil de manter.</p>
+            </article>
+            <div class="buttons">
+                <div>
+                    <button class="button">
+                        <svg href="#" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="home">
+                    <button class="button" onclick="remObject()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                        </svg>
+                        HOME
+                    </button>
+                </div>
+                <div href="#">
+                    <button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <p>Este artigo ofereceu uma visão abrangente da sintaxe da linguagem Python, cobrindo desde a estrutura básica de um script até variáveis, tipos, palavras reservadas e convenções da linguagem. Ao seguir as práticas recomendadas, os desenvolvedores podem criar código Python mais legível e fácil de manter.</p>
-        </article>
-    </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-logo">
+            <!-- Inclua aqui o seu logo no footer -->
+            <img src="img/mainlogo.png" alt="Logo do Site">
+        </div>
+        <div class="footer-left">
+            <h2>Aldenir Luiz</h2>
+            <h5>Creative commons 2023/2024</h5>
+        </div>
+        
+        <div class="footer-right">
+            <div class="license">
+                Este trabalho está licenciado sob uma <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Licença Creative Commons Atribuição-NãoComercial 4.0 Internacional</a>.
+            </div>
+            
+        </div>
+    </footer>
+    
 </body>
+
+<script src="../script.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
-        document.querySelectorAll('code').forEach((block) => {
-            hljs.highlightBlock(block);
+    document.querySelectorAll('pre code').forEach((el) => {
+      hljs.highlightElement(el);
         });
-    });
-</script>
+    });</script>
 </html>
